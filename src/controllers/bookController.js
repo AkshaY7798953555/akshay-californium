@@ -1,10 +1,10 @@
 const { count } = require("console")
-const BookModel= require("../models/bookModel")
+const bookMode= require("../models/bookModel")
 
 const createBook= async function (req, res) {
     let data= req.body
 
-    let savedData= await BookModel.create(data)
+    let savedData= await bookModel.create(data)
     res.send({msg: savedData})
 }
 
@@ -73,11 +73,11 @@ const getBooksData= async function (req, res) {
 
     // WHEN AWAIT IS USED: - database + axios
     //  AWAIT can not be used inside forEach , map and many of the array functions..BE CAREFUL
-    console.log(allBooks)
-    let b = 14
-    b= b+ 10
-    console.log(b)
-    res.send({msg: allBooks})
+   // console.log(allBooks)
+    //let b = 14
+    //b= b+ 10
+    //console.log(b)
+    //res.send({msg: allBooks})
 }
 
 
