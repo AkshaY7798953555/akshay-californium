@@ -1,16 +1,32 @@
 const { count } = require("console")
+const bookModel = require("../models/bookModel")
 const bookMode= require("../models/bookModel")
+const books = require("../models/books")
 
 const createBook= async function (req, res) {
     let data= req.body
+    //const {name,rating,publisher,author,price} =req.body
+    //if(!author){
+        //return res.send({status:false,message:"authhor is mandatory"})
+    
+    //if(!publisher){
+      //  return res.send({status:false,message:"publisher is mandatory"})
+    //}
 
-    let savedData= await bookModel.create(data)
+
+    let savedData= await books.create(data)
     res.send({msg: savedData})
 }
+module.exports.createBook= createBook
+//module.exports.getBooksData= getBooksData
 
-const getBooksData= async function (req, res) {
+//const getBooksData= async function (req, res) {
+   // let booksData =await BookModel.find()
+    //res.send({data:booksData})
+//}
 
-    // let allBooks= await BookModel.find( ).count() // COUNT
+
+     //let allBooks= await BookModel.find() // COUNT
 
     // let allBooks= await BookModel.find( { authorName : "Chetan Bhagat" , isPublished: true  } ) // AND
     
@@ -65,21 +81,20 @@ const getBooksData= async function (req, res) {
     
     // ASYNC AWAIT
     
-    let a= 2+4
-    a= a + 10
-    console.log(a)
-    let allBooks= await BookModel.find( )  //normally this is an asynchronous call..but await makes it synchronous
+    //let a= 2+4
+    //a= a + 10
+   // console.log(a)
+    //let allBooks= await BookModel.find( )  //normally this is an asynchronous call..but await makes it synchronous
 
 
     // WHEN AWAIT IS USED: - database + axios
     //  AWAIT can not be used inside forEach , map and many of the array functions..BE CAREFUL
    // console.log(allBooks)
-    //let b = 14
-    //b= b+ 10
+    ///let b = 14b= b+ 10
     //console.log(b)
     //res.send({msg: allBooks})
-}
+
 
 
 module.exports.createBook= createBook
-module.exports.getBooksData= getBooksData
+//module.exports.getBooksData= getBooksData
