@@ -9,6 +9,12 @@ router.get("/test-me", function (req, res) {
 
 router.post("/creatanewbooks", UserController.creatanewbooks  )
 router.get("/getListofallbooks", UserController.getListofallbooks)
+router.get("/getListofbooknameandAuthor", UserController.getListofbooknameandAuthor)
+router.get("/getinputYear", UserController.getinputYear)
+router.get("/getinputYearandName", UserController.getinputYearandName)
+router.get("/getinputPricebetw", UserController.getinputPricebetw)
+router.get("/getiAvailableinStockGt", UserController.getiAvailableinStockGt)
+
 
 
 module.exports = router;
