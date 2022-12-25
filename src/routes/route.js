@@ -47,7 +47,7 @@ router.post("/createBook", BookController.createBook  )
 
 
 
-
+commonMW
 router.get("/basicRoute", commonMW.mid1, commonMW.mid2, commonMW.mid3, commonMW.mid4, UserController.basicCode)
 
 
