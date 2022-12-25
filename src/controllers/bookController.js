@@ -6,6 +6,11 @@ const createBook= async function (req, res) {
     let bookCreated = await bookModel.create(book)
     res.send({data: bookCreated})
 }
+const createPublisher= async function (req, res) {
+    let books = req.body
+    let bookCreated = await bookModel.create(books)
+    res.send({data: bookCreated})
+}
 
 const getBooksData= async function (req, res) {
     let books = await bookModel.find()
@@ -21,3 +26,5 @@ const getBooksWithAuthorDetails = async function (req, res) {
 module.exports.createBook= createBook
 module.exports.getBooksData= getBooksData
 module.exports.getBooksWithAuthorDetails = getBooksWithAuthorDetails
+module.exports.createPublisher= createPublisher
+
