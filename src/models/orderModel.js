@@ -4,11 +4,11 @@ const ObjectId = mongoose.Schema.Types.ObjectId
 const orderSchema = new mongoose.Schema( {
     productId: {
         type: ObjectId,
-        ref: "sabihasProduct"
+        ref: "akshayProduct"
     }, 
     userId: {
         type: ObjectId,
-        ref: "sabihasUsers"
+        ref: "AkshaysUsers"
     },
     amount: Number,
     isFreeAppUser: Boolean,
@@ -16,4 +16,4 @@ const orderSchema = new mongoose.Schema( {
 }, { timestamps: true });
 
 
-module.exports = mongoose.model('sabihasOrder', orderSchema)
+module.exports = mongoose.model('AkshayOrder', orderSchema)
